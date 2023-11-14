@@ -17,8 +17,8 @@ export class NotesService {
     },
   };
 
-  findAll(): Notes {
-    return this.notes;
+  findAll(): Note[] {
+    return Object.values(this.notes);
   }
 
   create(newNote: Note) {

@@ -8,7 +8,6 @@ import {
   Put,
 } from '@nestjs/common';
 import { NotesService } from './notes.service';
-import { Notes } from 'src/notes';
 import { Note } from 'src/note';
 
 @Controller('notes')
@@ -16,7 +15,7 @@ export class NotesController {
   constructor(private readonly notesService: NotesService) {}
 
   @Get()
-  async index(): Promise<Notes> {
+  async index(): Promise<Note[]> {
     return this.notesService.findAll();
   }
 
