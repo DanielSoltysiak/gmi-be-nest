@@ -1,21 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { Note } from 'src/note';
 import { Notes } from 'src/notes';
+import defaultData from './defaultData';
 
 @Injectable()
 export class NotesService {
-  private readonly notes: Notes = {
-    1: {
-      id: 1,
-      title: 'Go to shop',
-      description: 'Buy lettuce',
-    },
-    2: {
-      id: 2,
-      title: 'Do recruitment task',
-      description: 'Use nest.js and next,js',
-    },
-  };
+  private readonly notes: Notes = defaultData;
 
   findAll(): Note[] {
     return Object.values(this.notes);
