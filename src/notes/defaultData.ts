@@ -2,7 +2,7 @@ import { Notes } from 'src/notes';
 
 const defaultData: Notes = {
   1: {
-    id: 2,
+    id: 1,
     title: 'Do recruitment task',
     description: 'Use nest.js and next,js',
   },
