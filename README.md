@@ -26,7 +26,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This CRUD API is done with the Nest Starter Repository. This application is listening on [http://localhost:7000](http://localhost:7000). To see how this API is consumed, see [Next.js Notes app](https://github.com/DanielSoltysiak/gmi-fe-next).
 
 ## Installation
 
