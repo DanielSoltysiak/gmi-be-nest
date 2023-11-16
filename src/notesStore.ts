@@ -1,5 +1,5 @@
 import { Note } from './note';
 
-export class Notes {
+export class NotesStore {
   [key: number]: Note;
 }

@@ -1,11 +1,17 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, OnModuleInit } from '@nestjs/common';
 import { Note } from 'src/note';
-import { Notes } from 'src/notes';
+import { NotesStore } from 'src/notesStore';
 import defaultData from './defaultData';
 
 @Injectable()
-export class NotesService {
-  private readonly notes: Notes = defaultData;
+export class NotesService implements OnModuleInit {
+  private readonly notes: NotesStore = {};
+  onModuleInit() {
+    defaultData.forEach((note) => {
+      console.log(`Initial data: ${note.id}`);
+      this.create(note);
+    });
+  }
 
   findAll(): Note[] {
     return Object.values(this.notes);
